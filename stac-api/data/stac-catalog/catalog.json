@@ -1,0 +1,23 @@
+{
+  "type": "Catalog",
+  "id": "greenland-crevasses-arcticdem",
+  "stac_version": "1.1.0",
+  "description": "STAC collection of binary and fractional classifications of crevasse presence across the Greenland Ice Sheet, derived from ArcticDEM v3.0 data at 2m and 200m resolution",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./crevasse_binary/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./crevasse_fraction/collection.json",
+      "type": "application/json"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "crevasse_fraction_NO_200m",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -33.78593078349611,
+          75.78736774512093
+        ],
+        [
+          -24.14644686399428,
+          82.2086100638244
+        ],
+        [
+          -82.28886578226552,
+          80.85344261878829
+        ],
+        [
+          -66.6195808016011,
+          75.01208326842887
+        ],
+        [
+          -33.78593078349611,
+          75.78736774512093
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -82.28886578226552,
+    75.01208326842887,
+    -24.14644686399428,
+    82.2086100638244
+  ],
+  "properties": {
+    "gsd": 200,
+    "proj:code": "EPSG:3413",
+    "proj:bbox": [
+      -601500.0,
+      -1517700.0,
+      300900.0,
+      -789900.0
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            300900.0,
+            -1517700.0
+          ],
+          [
+            300900.0,
+            -789900.0
+          ],
+          [
+            -601500.0,
+            -789900.0
+          ],
+          [
+            -601500.0,
+            -1517700.0
+          ],
+          [
+            300900.0,
+            -1517700.0
+          ]
+        ]
+      ]
+    },
+    "proj:transform": [
+      200.0,
+      0.0,
+      -601500.0,
+      0.0,
+      -200.0,
+      -789900.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "proj:shape": [
+      3639,
+      4512
+    ],
+    "datetime": "2018-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "fraction": {
+      "href": "https://zenodo.org/records/18631893/files/crevasse_fraction_NO_200m.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "nodata": -9999,
+          "data_type": "float32",
+          "spatial_resolution": 200,
+          "unit": "m"
+        }
+      ]
+    }
+  },
+  "collection": "crevasse_fraction"
+}

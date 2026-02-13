@@ -1,0 +1,47 @@
+services:
+  postgres:
+    container_name: stac-db
+    image: ghcr.io/stac-utils/pgstac:v0.9.1
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgis
+      PGUSER: username
+      PGPASSWORD: password
+      PGDATABASE: postgis
+    ports:
+      - "5439:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    command: postgres -N 500
+
+  stac-fastapi:
+    container_name: stac-api
+    image: ghcr.io/stac-utils/stac-fastapi-pgstac:latest
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASS: password
+      POSTGRES_DBNAME: postgis
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_HOST_READER: postgres
+      POSTGRES_HOST_WRITER: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    command: uvicorn stac_fastapi.pgstac.app:app --host 0.0.0.0 --port 8080
+
+  stac-browser:
+    container_name: stac-browser
+    image: ghcr.io/radiantearth/stac-browser:latest
+    ports:
+      - "8081:8080"
+    environment:
+      - CATALOG_URL=http://localhost:8080/
+      - SB_catalogUrl=http://localhost:8080/
+    depends_on:
+      - stac-fastapi
+
+volumes:
+  pgdata:

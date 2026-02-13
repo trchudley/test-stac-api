@@ -1,0 +1,127 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "crevasse_binary_NW_2m",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -37.956893018183365,
+          71.63969866156334
+        ],
+        [
+          -32.950738386217154,
+          79.15727262316626
+        ],
+        [
+          -72.82107501418105,
+          78.0178835764041
+        ],
+        [
+          -61.98475126117283,
+          70.95917998411838
+        ],
+        [
+          -37.956893018183365,
+          71.63969866156334
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -72.82107501418105,
+    70.95917998411838,
+    -32.950738386217154,
+    79.15727262316626
+  ],
+  "properties": {
+    "gsd": 2,
+    "proj:code": "EPSG:3413",
+    "proj:bbox": [
+      -607916.0,
+      -1990298.0,
+      245898.0,
+      -1151988.0
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            245898.0,
+            -1990298.0
+          ],
+          [
+            245898.0,
+            -1151988.0
+          ],
+          [
+            -607916.0,
+            -1151988.0
+          ],
+          [
+            -607916.0,
+            -1990298.0
+          ],
+          [
+            245898.0,
+            -1990298.0
+          ]
+        ]
+      ]
+    },
+    "proj:transform": [
+      2.0,
+      0.0,
+      -607916.0,
+      0.0,
+      -2.0,
+      -1151988.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "proj:shape": [
+      419155,
+      426907
+    ],
+    "datetime": "2018-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "binary": {
+      "href": "https://zenodo.org/records/18631893/files/crevasse_binary_NW_2m.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "nodata": 0,
+          "data_type": "uint8",
+          "spatial_resolution": 2,
+          "unit": "m"
+        }
+      ]
+    }
+  },
+  "collection": "crevasse_binary"
+}

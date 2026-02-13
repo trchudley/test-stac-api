@@ -1,0 +1,64 @@
+{
+  "type": "Collection",
+  "id": "crevasse_binary",
+  "stac_version": "1.1.0",
+  "description": "Binary classification of crevasse presence (2) or absence (1) across the Greenland Ice Sheet from ArcticDEM v3.0 data at 2m resolution",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./crevasse_binary_CW_2m/crevasse_binary_CW_2m.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./crevasse_binary_NE_2m/crevasse_binary_NE_2m.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./crevasse_binary_NO_2m/crevasse_binary_NO_2m.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./crevasse_binary_NW_2m/crevasse_binary_NW_2m.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./crevasse_binary_SE_2m/crevasse_binary_SE_2m.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -82.2837118078494,
+          60.39568233659936,
+          -10.11215308234768,
+          82.20861230234077
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0"
+}
