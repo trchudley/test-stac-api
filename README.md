@@ -28,7 +28,7 @@ stac-api/
 
 Do **not** put Docker files inside your STAC.
 
-## Step 3 — Create `docker-compose.yml`
+###  Create `docker-compose.yml`
 
 Create `stac-api/docker-compose.yml` with containing instructions.
 
