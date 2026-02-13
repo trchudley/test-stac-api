@@ -2,6 +2,8 @@
 
 This repository tests the production of a STAC catalogue for a simple hosted dataset, and contains notes as to how to make the STAC 'dynamic' (i.e. accessible via a local STAC API) using a Docker environment.
 
+![Example of STAC browser working](./images/screenshot.png)
+
 ## Test data
 
 200 m resolution crevasse fraction map of Greenland, split into six regions (Chudley, 2022, https://doi.org/10.5281/zenodo.6779087)
